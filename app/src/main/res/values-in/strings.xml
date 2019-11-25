@@ -1,8 +1,10 @@
 <resources>
     <string name="language">id</string>
-    <string name="app_name">My Movies 2</string>
+    <string name="app_name">My Last Movie</string>
     <string name="tab_text_1">Film</string>
     <string name="tab_text_2">Serial TV</string>
+    <string name="tab_text_3">Favorit</string>
+    <string name="lbl_header_reminder_setting">Pengaturan Pengingat</string>
     <string name="lbl_movie_title">Judul</string>
     <string name="lbl_movie_year">Tahun</string>
     <string name="txt_movie_rate">Rating</string>
@@ -41,6 +43,22 @@
     <string name="lbl_image_desc">Deskripsi</string>
     <string name="lbl_rating">Rating</string>
     <string name="title">Judul</string>
+    <string name="title_activity_favorite">Favorit</string>
     <string name="koneksi">Tidak ada koneksi internet!</string>
+    <string name="message">telah ditambahkan ke favorit!</string>
+    <string name="search">pencarian</string>
+    <string name="setting">pengaturan</string>
+    <string name="preferences">preferensi</string>
+    <string name="search_movie_hint">Masukkan judul film</string>
+    <string name="search_tv_hint">Masukkan judul serial tv</string>
+    <string name="appwidget_text">STAR WARS BANNER</string>
+    <string name="empty_text">NO DATA</string>
+    <string name="add_widget">Add widget</string>
 
+    <string name="release_reminder_key">RELEASE</string>
+    <string name="release_reminder_title">Release Reminder</string>
+    <string name="release_reminder_desc">Reminder showing the movie release</string>
+    <string name="daily_reminder_key">DAILY</string>
+    <string name="daily_reminder_title">Daily Reminder</string>
+    <string name="daily_reminder_desc">Reminder for return to app</string>
 </resources>

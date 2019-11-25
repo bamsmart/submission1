@@ -1,8 +1,10 @@
 <resources>
     <string name="language">en-US</string>
-    <string name="app_name">My Movies 2</string>
+    <string name="app_name">My Last Movie</string>
     <string name="tab_text_1">Movies</string>
     <string name="tab_text_2">TV Shows</string>
+    <string name="tab_text_3">Favorite</string>
+    <string name="lbl_header_reminder_setting">Reminder Setting</string>
     <string name="lbl_movie_title">Title</string>
     <string name="lbl_movie_year">Year</string>
     <string name="txt_movie_rate">Rate </string>
@@ -41,6 +43,22 @@
     <string name="lbl_image_desc">Description</string>
     <string name="lbl_rating">Rating</string>
     <string name="title">Title</string>
+    <string name="title_activity_favorite">Favorite</string>
     <string name="koneksi">No internet connection!</string>
+    <string name="message">is added to favorite!</string>
+    <string name="search">search</string>
+    <string name="setting">setting</string>
+    <string name="preferences">preferences</string>
+    <string name="search_movie_hint">type film name</string>
+    <string name="search_tv_hint">type tv show name</string>
+    <string name="appwidget_text">STAR WARS BANNER</string>
+    <string name="empty_text">NO DATA</string>
+    <string name="add_widget">Add widget</string>
 
+    <string name="release_reminder_key">RELEASE</string>
+    <string name="release_reminder_title">Release Reminder</string>
+    <string name="release_reminder_desc">Reminder showing the movie release</string>
+    <string name="daily_reminder_key">DAILY</string>
+    <string name="daily_reminder_title">Daily Reminder</string>
+    <string name="daily_reminder_desc">Reminder for return to app</string>
 </resources>

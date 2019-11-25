@@ -67,6 +67,90 @@
       <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapi.model.TVShowModel vote_average" />
       <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapi.model.TVShowModel vote_count" />
       <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapi.utils.SessionManager context" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieActivity actionBar" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.TVShowModel backdrop_path" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.MovieModel budget" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.MovieCredits character" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.TVShowCredits character" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment configuration" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.adapter.ListRandMovieAdapter context" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.utils.SessionManager context" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.Movie CREATOR" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.MovieModel CREATOR" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.TVShow CREATOR" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.TVShowModel CREATOR" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.MovieCredits creditsList" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.TVShowCredits creditsList" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.utils.SessionManager editor" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.TVShowModel genre_ids" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.MovieCredits id" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.TVShowCredits id" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.adapter.ListRandMovieAdapter.MyViewHolder image" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.MovieCredits image" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.TVShowCredits image" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment imgThumb" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment imgThumb" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.adapter.ListRandMovieAdapter inflater" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.utils.SessionManager KEY_LANGUAGE" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.api.APIError message" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment movieBunddle" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment movieCredits" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment movieData" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.adapter.ListRandMovieAdapter movieList" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment movieModel" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment movieRealm" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.MovieCredits name" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.TVShowCredits name" />
+      <entry_point TYPE="method" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment$2 void onClick(android.view.View view)" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.adapter.ListRandMovieAdapter onItemClickCallbacks" />
+      <entry_point TYPE="method" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment$1 void onItemClicked(learning.shinesdev.mymoviesapiplusfavorit.model.MovieModel data)" />
+      <entry_point TYPE="method" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment$1 void onItemClicked(learning.shinesdev.mymoviesapiplusfavorit.model.TVShowModel data)" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.TVShowModel original_language" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.TVShowModel original_name" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.Movie page" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.TVShow page" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.MovieModel popularity" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.TVShowModel popularity" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.utils.SessionManager pref" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.utils.SessionManager PREF_NAME" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.utils.SessionManager PRIVATE_MODE" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment realm" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment realm" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment realmHelper" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment realmHelper" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment recommMovieAdapter" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment recommMovieArrList" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment recommMovieRecyclerView" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment recommTVShowAdapter" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment recommTVShowArrList" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment recommTVShowRecyclerView" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment scrollView" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.api.APIError statusCode" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment strCredits" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment strCredits" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.adapter.ListRandMovieAdapter.MyViewHolder time" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.Movie total_pages" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.TVShow total_pages" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.Movie total_result" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.TVShow total_result" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment tvShow" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment tvShowCredits" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment tvShowdata" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment tvShowModel" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment tvShowRealm" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment txtDirector" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment txtGross" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment txtStars" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment txtStars" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment txtSynopnsis" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment txtSynopnsis" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment txtTitle" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment txtTitle" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment txtVotes" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment txtVotes" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment txtYear" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment txtYear" />
+      <entry_point TYPE="field" FQNAME="learning.shinesdev.mymoviesapiplusfavorit.model.TVShowModel vote_average" />
     </entry_points>
     <pattern value="learning.shinesdev.mymoviesapi.ExampleUnitTest" method="addition_isCorrect" />
     <pattern value="learning.shinesdev.mymoviesapi.DetailMovieActivity" />
@@ -99,6 +183,97 @@
     <pattern value="learning.shinesdev.mymoviesapi.model.TVShowModel" method="TVShowModel" />
     <pattern value="learning.shinesdev.mymoviesapi.utils.SessionManager" />
     <pattern value="learning.shinesdev.mymoviesapi.model.Movie" method="Movie" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.ExampleUnitTest" method="addition_isCorrect" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment" method="AddToFavorite" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment" method="AddToFavorite" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.api.APIError" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.api.RetrofitClient" method="createService" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieActivity" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment" method="DetailMovieFragment" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowActivity" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment" method="DetailTVShowFragment" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.ExampleInstrumentedTest" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.ExampleUnitTest" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.favorite.FavoriteMovieFragment" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.favorite.FavoritePagerFragment" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.favorite.FavoriteTVShowFragment" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.realm.MovieRealm" method="getFavorite" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.model.TVShowModel" method="getFavorite" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.realm.TVShowRealm" method="getFavorite" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.adapter.ListRandMovieAdapter" method="getItemCount" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.utils.SessionManager" method="getPrevLang" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.realm.MovieRealm" method="getRevenue" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.realm.TVShowRealm" method="getRevenue" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.model.MovieModel" method="getUnique_id" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.MainActivity" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.MovieFragment" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.realm.RealmMovieHelper" method="insert" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.adapter.ListRandMovieAdapter" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.adapter.ListRandMovieAdapter" method="ListRandMovieAdapter" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.model.Movie" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.model.MovieCredits" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.model.MovieModel" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.realm.MovieRealm" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.adapter.ListRandMovieAdapter.MyViewHolder" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.adapter.ListRandMovieAdapter.MyViewHolder" method="MyViewHolder" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.adapter.ListRandMovieAdapter" method="onBindViewHolder" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment" method="onCreate" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment" method="onCreate" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment" method="onCreateOptionsMenu" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment" method="onCreateOptionsMenu" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment" method="onCreateView" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment" method="onCreateView" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.adapter.ListRandMovieAdapter" method="onCreateViewHolder" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment" method="onDestroy" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.adapter.ListRandMovieAdapter.OnItemClickCallback" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.adapter.ListRandMovieAdapter.OnItemClickCallback" method="onItemClicked" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment" method="onOptionsItemSelected" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment" method="onOptionsItemSelected" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment" method="onSaveInstanceState" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment" method="onSaveInstanceState" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment" method="onViewCreated" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment" method="onViewCreated" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.favorite.FavoriteMovieFragment" method="onViewCreated" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.favorite.FavoriteTVShowFragment" method="onViewCreated" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.realm.RealmMovieHelper" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.realm.RealmTVShowHelper" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.api.RetrofitClient" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.utils.SectionsPagerAdapter" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.utils.SectionsPagerAdapter" method="SectionsPagerAdapter" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.utils.SessionManager" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.utils.SessionManager" method="SessionManager" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.model.MovieModel" method="setDate" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.model.MovieModel" method="setFavorite" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.model.TVShowModel" method="setFavorite" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.model.MovieModel" method="setId" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.model.MovieModel" method="setImage" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.adapter.ListRandMovieAdapter" method="setOnItemClickCallback" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.model.MovieModel" method="setOverview" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.utils.SessionManager" method="setPrevLang" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.model.MovieModel" method="setRating" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.realm.MovieRealm" method="setRating" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.realm.TVShowRealm" method="setRating" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.model.MovieModel" method="setRevenue" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.realm.TVShowRealm" method="setRevenue" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.model.MovieModel" method="setTitle" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.model.MovieModel" method="setUnique_id" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment" method="setupRecommRecyclerView" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment" method="setupRecommRecyclerView" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.movie.DetailMovieFragment" method="setupUI" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.DetailTVShowFragment" method="setupUI" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.model.MovieModel" method="setVote" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.api.APIError" method="status" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.model.TVShow" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.model.TVShowCredits" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.TVShowFragment" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.screen.tvshow.TVShowFragment" method="TVShowFragment" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.model.TVShowModel" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.realm.TVShowRealm" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.realm.RealmMovieHelper" method="update" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.realm.RealmTVShowHelper" method="update" />
+    <pattern value="learning.shinesdev.mymoviesapiplusfavorit.ExampleInstrumentedTest" method="useAppContext" />
   </component>
   <component name="NullableNotNullManager">
     <option name="myDefaultNullable" value="org.jetbrains.annotations.Nullable" />

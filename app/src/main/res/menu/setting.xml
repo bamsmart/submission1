@@ -2,8 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/setting"
-        android:icon="@drawable/ic_setting"
-        android:title="@string/lbl_movie_title"
-        app:showAsAction="always" />
+        android:id="@+id/search"
+        android:icon="@drawable/ic_search_white_24px"
+        android:title="@string/search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="collapseActionView|ifRoom" />
+
+    <group android:menuCategory="container" >
+        <item
+            android:id="@+id/setting"
+            android:icon="@drawable/ic_setting"
+            android:title="@string/setting"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/prefs"
+            android:icon="@drawable/ic_mode_edit_black_24dp"
+            android:title="@string/preferences"
+            app:showAsAction="collapseActionView|ifRoom" />
+    </group>
+
 </menu>
