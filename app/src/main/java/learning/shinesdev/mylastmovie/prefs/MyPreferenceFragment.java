@@ -48,20 +48,20 @@ public class MyPreferenceFragment extends PreferenceFragmentCompat implements Sh
         PreferenceManager prefs = getPreferenceManager();
         if (key.equals(str_release)) {
             if(prefs.getSharedPreferences().getBoolean(str_release, false)){
-                switch_release.setEnabled(sharedPreferences.getBoolean(str_release, true));
+                switch_release.setChecked(sharedPreferences.getBoolean(str_release, true));
                 startReleasedJobReminder();
                 Toast.makeText(getContext(),""+prefs.getSharedPreferences().getBoolean(str_release, false),Toast.LENGTH_LONG).show();
             }else{
                 cancelReleasedJobReminder();
-                switch_release.setEnabled(sharedPreferences.getBoolean(str_release, false));
+                switch_release.setChecked(sharedPreferences.getBoolean(str_release, false));
             }
         }
         if (key.equals(str_daily)) {
             if(prefs.getSharedPreferences().getBoolean(str_daily, false)) {
-                switch_daily.setEnabled(sharedPreferences.getBoolean(str_daily, true));
+                switch_daily.setChecked(sharedPreferences.getBoolean(str_daily, true));
                 startDailyJobReminder();
             }else{
-                switch_daily.setEnabled(sharedPreferences.getBoolean(str_daily, false));
+                switch_daily.setChecked(sharedPreferences.getBoolean(str_daily, false));
                 cancelDailyJobReminder();
             }
         }
@@ -80,7 +80,7 @@ public class MyPreferenceFragment extends PreferenceFragmentCompat implements Sh
     }
 
     private void startDailyJobReminder(){
-        String repeatTime = "09:27";
+        String repeatTime = "10:20";
         dailyReceiver.setRepeatingAlarm(getContext(), DailyReminderReceiver.TYPE_REPEATING,
                 repeatTime);
         Toast.makeText(getContext(), "Job Service started", Toast.LENGTH_SHORT).show();
@@ -104,15 +104,12 @@ public class MyPreferenceFragment extends PreferenceFragmentCompat implements Sh
         }
         JobScheduler jobScheduler = (JobScheduler) getContext().getSystemService(Context.JOB_SCHEDULER_SERVICE);
         Objects.requireNonNull(jobScheduler).schedule(builder.build());
-        Toast.makeText(getContext(), "Job Service started", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), "Daily Reminder Started!", Toast.LENGTH_SHORT).show();
     }
 
     private void cancelDailyJobReminder(){
         dailyReceiver.cancelDailyReminder(getContext(), DailyReminderReceiver.TYPE_REPEATING);
-
-       /* JobScheduler tm = (JobScheduler) Objects.requireNonNull(getContext()).getSystemService(Context.JOB_SCHEDULER_SERVICE);
-        tm.cancel(JOB_DAILY_ID);
-        Toast.makeText(getContext(), "Job Service canceled", Toast.LENGTH_SHORT).show();*/
+        Toast.makeText(getContext(), "Daily Reminder Stop!", Toast.LENGTH_SHORT).show();
     }
 
     private void cancelReleasedJobReminder(){
