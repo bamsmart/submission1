@@ -2,7 +2,6 @@ package learning.shinesdev.mylastmovie.adapter;
 
 import android.content.Context;
 import android.database.Cursor;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,7 +49,6 @@ public class ListFavoriteMovieAdapter extends RecyclerView.Adapter<ListFavoriteM
         holder.txtVotes.setText(String.valueOf(movieModel.getVote()));
         String img_url = IMG_URL + movieModel.getImage();
 
-        Log.d("title", "" + movieModel.getTitle());
         try {
             Glide.with(context).load(img_url)
                     .centerCrop()

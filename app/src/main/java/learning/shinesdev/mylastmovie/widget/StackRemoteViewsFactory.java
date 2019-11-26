@@ -2,9 +2,13 @@ package learning.shinesdev.mylastmovie.widget;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Binder;
 import android.os.Bundle;
+import android.provider.UserDictionary;
+import android.util.Log;
 import android.widget.RemoteViews;
 import android.widget.RemoteViewsService;
 
@@ -12,10 +16,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import learning.shinesdev.mylastmovie.R;
+import learning.shinesdev.mylastmovie.database.DatabaseContract;
+import learning.shinesdev.mylastmovie.database.QueryCursorLoader;
+import learning.shinesdev.mylastmovie.model.MovieModel;
+import learning.shinesdev.mylastmovie.model.MovieRealm;
 
 
 class StackRemoteViewsFactory implements RemoteViewsService.RemoteViewsFactory {
-
     private final List<Bitmap> mWidgetItems = new ArrayList<>();
     private final Context mContext;
 
@@ -25,13 +32,28 @@ class StackRemoteViewsFactory implements RemoteViewsService.RemoteViewsFactory {
 
     @Override
     public void onCreate() {
-        //required
     }
 
     @Override
     public void onDataSetChanged() {
-        mWidgetItems.add(BitmapFactory.decodeResource(mContext.getResources(), R.drawable.silver_star));
-        mWidgetItems.add(BitmapFactory.decodeResource(mContext.getResources(), R.drawable.stars));
+        final long identityToken = Binder.clearCallingIdentity();
+        Cursor mCursor = null;
+
+        // querying ke database
+        mCursor = mContext.getContentResolver().query(DatabaseContract.CONTENT_URI, null, null, null, null);
+
+        Log.d("SIZE ",""+mCursor.getCount());
+
+        for (int i = 0; i < mCursor.getCount(); i++){
+            mCursor.moveToPosition(i);
+            MovieRealm movieModel = new MovieRealm(mCursor);
+            Log.d("",""+movieModel.getTitle());
+
+            mWidgetItems.add(i,null);
+        }
+
+
+        Binder.restoreCallingIdentity(identityToken);
     }
 
     @Override

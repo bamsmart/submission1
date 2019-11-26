@@ -146,9 +146,7 @@ public class FavoriteMovieFragment extends Fragment implements
         if (id == ID_LOADER) {//if (sortOrder.equals(sortDefault)) {
 
             result = new QueryCursorLoader(getContext(), DatabaseContract.CONTENT_URI, DatabaseContract.DEFAULT_SORT);
-                /*} else if(sortOrder.equals(sortDate)) {
-                    result = new QueryCursorLoader(getContext(), DatabaseContract.CONTENT_URI, DatabaseContract.DATE_SORT);
-                }*/
+
         }
         return result;
     }
@@ -166,7 +164,6 @@ public class FavoriteMovieFragment extends Fragment implements
 
     @Override
     public void onItemClick(View v, int position) {
-        Log.d("CLICK",""+ position);
         new SweetAlertDialog(Objects.requireNonNull(getContext()), SweetAlertDialog.WARNING_TYPE)
                 .setTitleText("Are you sure?")
                 .setContentText("Won't be able to recover this file!")

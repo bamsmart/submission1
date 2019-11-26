@@ -5,7 +5,7 @@ import android.provider.BaseColumns;
 
 public class DatabaseContract {
     public static final String TABLE_MOVIE = "movie";
-    public static final String CONTENT_AUTHORITY = "learning.shinesdev.finalproject";
+    public static final String CONTENT_AUTHORITY = "learning.shinesdev.mylastmovie";
     private static final String SCHEME = "content";
 
     public static final String DEFAULT_SORT = String.format("%s DESC, %s DESC, %s ASC",

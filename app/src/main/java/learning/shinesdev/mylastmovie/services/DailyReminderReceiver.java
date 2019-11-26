@@ -39,38 +39,28 @@ import retrofit2.Response;
 import static learning.shinesdev.mylastmovie.api.ApiUtils.API_KEY;
 
 public class DailyReminderReceiver extends BroadcastReceiver {
-    public static final String TYPE_ONE_TIME = "OneTimeAlarm";
-    public static final String TYPE_REPEATING = "RepeatingAlarm";
-    private static final int DAILY_ID = 110;
-    private static final int JOB_RELEASED_ID = 220;
-    private static final String EXTRA_MESSAGE = "message";
-    private static final String EXTRA_TYPE = "type";
-    private final static int ID_REPEATING = 101;
-    Context context;
+    private static final int NOTIFIY_DAILY_ID = 110;
+    private final static int REMINDER_REPEAT_ID = 101;
 
-    public void setRepeatingAlarm(Context context, String type, String time) {
-        //if (isDateInvalid(time, TIME_FORMAT)) return;
+    public void setRepeatingAlarm(Context context, String time) {
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(context, DailyReminderReceiver.class);
-        //intent.putExtra(EXTRA_MESSAGE, message);
-        intent.putExtra(EXTRA_TYPE, type);
         String[] timeArray = time.split(":");
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(timeArray[0]));
         calendar.set(Calendar.MINUTE, Integer.parseInt(timeArray[1]));
         calendar.set(Calendar.SECOND, 0);
 
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, ID_REPEATING, intent, 0);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, REMINDER_REPEAT_ID, intent, 0);
         if (alarmManager != null) {
             alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
         }
     }
 
-    public void cancelDailyReminder(Context context, String type) {
+    public void cancelDailyReminder(Context context) {
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(context, DailyReminderReceiver.class);
-        int requestCode = ID_REPEATING;
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, requestCode, intent, 0);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, REMINDER_REPEAT_ID, intent, 0);
         pendingIntent.cancel();
 
         if (alarmManager != null) {
@@ -94,22 +84,23 @@ public class DailyReminderReceiver extends BroadcastReceiver {
                 if (response.isSuccessful()) {
                     try {
                         ArrayList<MovieModel> data = new ArrayList<>(Objects.requireNonNull(response.body()).getMovieList());
-                        showNotification(context,DAILY_ID,data);
+                        showNotification(context,data);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                 } else {
                     APIError error = ErrorUtils.parseError(response);
                     error.message();
+                    cancelDailyReminder(context);
                 }
     }
         @Override
         public void onFailure(@NonNull Call<Movie> call, @NonNull Throwable t) {
-
+                cancelDailyReminder(context);
         }
     });
 }
-    public void showNotification(Context context, int notifId,  ArrayList<MovieModel>  data){
+    public void showNotification(Context context,ArrayList<MovieModel>  data){
         String CHANNEL_ID = "Channel_1";
         String CHANNEL_NAME = "Job scheduler channel";
         Intent intent = new Intent(context, DetailMovieActivity.class);
@@ -145,7 +136,7 @@ public class DailyReminderReceiver extends BroadcastReceiver {
         }
         Notification notification = builder.build();
         if (notificationManagerCompat != null) {
-            notificationManagerCompat.notify(notifId, notification);
+            notificationManagerCompat.notify(NOTIFIY_DAILY_ID, notification);
         }
     }
 }

@@ -2,12 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="learning.shinesdev.mylastmovie">
+
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <permission android:name="learning.shinesdev.mylastmovie.READ_DATABASE" android:protectionLevel="normal"/>
-    <permission android:name="learning.shinesdev.mylastmovie.WRITE_DATABASE" android:protectionLevel="normal"/>
+
+    <permission
+        android:name="learning.shinesdev.mylastmovie.READ_DATABASE"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="learning.shinesdev.mylastmovie.WRITE_DATABASE"
+        android:protectionLevel="normal" />
 
     <application
         android:allowBackup="true"
@@ -22,19 +28,24 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <provider
-            android:name="learning.shinesdev.mylastmovie.provider.MovieContentProvider"
-            android:authorities="learning.shinesdev.mylastmovie"
-            android:readPermission="learning.shinesdev.finalproject.READ_DATABASE"
-            android:writePermission="learning.shinesdev.finalproject.WRITE_DATABASE"
+        <receiver
+            android:name=".services.ReleaseReminderReceiver"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true"></receiver>
+
+        <provider
+            android:name=".provider.MovieContentProvider"
+            android:authorities="learning.shinesdev.mylastmovie"
+            android:enabled="true"
+            android:exported="true"
+            android:readPermission="learning.shinesdev.mylastmovie.READ_DATABASE"
+            android:writePermission="learning.shinesdev.mylastmovie.WRITE_DATABASE" />
 
         <activity
-            android:name="learning.shinesdev.mylastmovie.activity.ReminderSetting"
-            android:parentActivityName="learning.shinesdev.mylastmovie.activity.MainActivity" />
+            android:name=".activity.ReminderSetting"
+            android:parentActivityName=".activity.MainActivity" />
 
-        <receiver android:name="learning.shinesdev.mylastmovie.widget.MovieWidget">
+        <receiver android:name=".widget.MovieWidget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -44,18 +55,17 @@
                 android:resource="@xml/movie_app_widget_info" />
         </receiver>
         <receiver
-            android:name="learning.shinesdev.mylastmovie.services.DailyReminderReceiver"
+            android:name=".services.DailyReminderReceiver"
             android:enabled="true"
             android:exported="true" />
 
-
         <activity
-            android:name="learning.shinesdev.mylastmovie.activity.tvshow.DetailTVShowActivity"
-            android:parentActivityName="learning.shinesdev.mylastmovie.activity.tvshow.TVShowFragment" />
+            android:name=".activity.tvshow.DetailTVShowActivity"
+            android:parentActivityName=".activity.tvshow.TVShowFragment" />
         <activity
-            android:name="learning.shinesdev.mylastmovie.activity.movie.DetailMovieActivity"
-            android:parentActivityName="learning.shinesdev.mylastmovie.activity.movie.MovieFragment" />
-        <activity android:name="learning.shinesdev.mylastmovie.activity.MainActivity">
+            android:name=".activity.movie.DetailMovieActivity"
+            android:parentActivityName=".activity.movie.MovieFragment" />
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -64,14 +74,14 @@
         </activity>
 
         <service
-            android:name="learning.shinesdev.mylastmovie.widget.StackWidgetService"
-            android:permission="android.permission.BIND_REMOTE_VIEWS" />
+            android:name=".widget.StackWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
         <service
-            android:name="learning.shinesdev.mylastmovie.services.ReleaseReminderService"
+            android:name=".services.ReleaseReminderService"
             android:enabled="true"
             android:exported="true"
             android:permission="android.permission.BIND_JOB_SERVICE" />
-        <service android:name="learning.shinesdev.mylastmovie.provider.MovieUpdateService" />
+        <service android:name=".provider.MovieUpdateService" />
     </application>
 
 </manifest>
