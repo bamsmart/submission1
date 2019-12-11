@@ -15,8 +15,8 @@ public class MovieWidget extends AppWidgetProvider {
     private static final String TOAST_ACTION = "learning.shinesdev.mylastmovie.TOAST_ACTION";
     public static final String EXTRA_ITEM = "learning.shinesdev.mylastmovie.EXTRA_ITEM";
 
-    static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
-                                int appWidgetId) {
+    private static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
+                                        int appWidgetId) {
 
         Intent intent = new Intent(context, StackWidgetService.class);
         intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
@@ -48,7 +48,7 @@ public class MovieWidget extends AppWidgetProvider {
         super.onReceive(context, intent);
         if (intent.getAction() != null) {
             if (intent.getAction().equals(TOAST_ACTION)) {
-
+                //int id = intent.getIntExtra(EX)
                 int viewIndex = intent.getIntExtra(EXTRA_ITEM, 0);
                 Toast.makeText(context, "Touched view " + viewIndex, Toast.LENGTH_SHORT).show();
             }

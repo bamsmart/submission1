@@ -3,6 +3,7 @@ package learning.shinesdev.mylastmovie.database;
 import android.util.Log;
 
 import java.util.List;
+import java.util.Objects;
 
 import io.realm.Realm;
 import io.realm.RealmResults;
@@ -37,7 +38,7 @@ public class RealmMovieHelper {
             MovieRealm model = realm.where(MovieRealm.class)
                     .equalTo("id", id)
                     .findFirst();
-            model.setTitle(nim);
+            Objects.requireNonNull(model).setTitle(nim);
             model.setFavorite(nama);
         }, () -> Log.e("pppp", "onSuccess: Update Successfully"), Throwable::printStackTrace);
     }

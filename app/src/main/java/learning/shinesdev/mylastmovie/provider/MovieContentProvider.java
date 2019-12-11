@@ -8,6 +8,7 @@ import android.database.Cursor;
 import android.database.MatrixCursor;
 import android.net.Uri;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -33,7 +34,7 @@ import static learning.shinesdev.mylastmovie.database.DatabaseContract.MovieColu
 import static learning.shinesdev.mylastmovie.database.DatabaseContract.MovieColumns.VOTE;
 import static learning.shinesdev.mylastmovie.database.DatabaseContract.MovieColumns.REVENUE;
 import static learning.shinesdev.mylastmovie.database.DatabaseContract.MovieColumns.FAVORITE;
-import static learning.shinesdev.mylastmovie.database.DatabaseContract.CONTENT_URI;
+import static learning.shinesdev.mylastmovie.database.DatabaseContract.CONTENT_URI_MOVIE;
 
 public class MovieContentProvider extends ContentProvider {
     private static final int MOVIE = 1;
@@ -44,7 +45,7 @@ public class MovieContentProvider extends ContentProvider {
     static {
         sUriMatcher.addURI(CONTENT_AUTHORITY, TABLE_MOVIE, MOVIE);
         sUriMatcher.addURI(CONTENT_AUTHORITY,
-                TABLE_MOVIE + "/#",
+                TABLE_MOVIE + "/*",
                 MOVIE_ID);
     }
 
@@ -96,7 +97,6 @@ public class MovieContentProvider extends ContentProvider {
                                 movie.getFavorite()
                         };
                         myCursor.addRow(rowData);
-                        Log.v("RealmDB", movie.toString());
                     }
                     break;
                 case MOVIE_ID:
@@ -204,11 +204,16 @@ public class MovieContentProvider extends ContentProvider {
                     movie.setRevenue((Integer) values.get(REVENUE));
                     movie.setFavorite((Integer) values.get(FAVORITE));
                 });
-                returnUri = ContentUris.withAppendedId(CONTENT_URI, '1');
+                returnUri = ContentUris.withAppendedId(CONTENT_URI_MOVIE, '1');
             } else {
                 throw new UnsupportedOperationException("Unknown uri: " + uri);
             }
             Objects.requireNonNull(getContext()).getContentResolver().notifyChange(uri, null);
+        } catch (Exception e) {
+            returnUri = null;
+            Toast.makeText(getContext(), e.getMessage().toLowerCase(), Toast.LENGTH_LONG).show();
+            e.printStackTrace();
+            realm.close();
         } finally {
             realm.close();
         }
@@ -217,6 +222,7 @@ public class MovieContentProvider extends ContentProvider {
 }
 
 class MovieRealmMigration implements RealmMigration {
+    @SuppressWarnings("UnusedAssignment")
     @Override
     public void migrate(DynamicRealm realm, long oldVersion, long newVersion) {
         RealmSchema schema = realm.getSchema();

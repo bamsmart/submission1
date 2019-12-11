@@ -19,7 +19,7 @@ import learning.shinesdev.mylastmovie.model.MovieRealm;
 
 import static learning.shinesdev.mylastmovie.api.ApiUtils.IMG_URL;
 
-public class ListFavoriteMovieAdapter extends RecyclerView.Adapter<ListFavoriteMovieAdapter.MovieHolder>{
+public class ListFavoriteMovieAdapter extends RecyclerView.Adapter<ListFavoriteMovieAdapter.MovieHolder> {
     private final Context context;
     private Cursor mCursor;
     private OnItemClickListener mOnItemClickListener;
@@ -27,6 +27,7 @@ public class ListFavoriteMovieAdapter extends RecyclerView.Adapter<ListFavoriteM
     public ListFavoriteMovieAdapter(Context context) {
         this.context = context;
     }
+
     public void setOnItemClickListener(OnItemClickListener listener) {
         mOnItemClickListener = listener;
     }
@@ -85,6 +86,10 @@ public class ListFavoriteMovieAdapter extends RecyclerView.Adapter<ListFavoriteM
         notifyDataSetChanged();
     }
 
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
+
     class MovieHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private final TextView
                 txtTitle,
@@ -94,7 +99,7 @@ public class ListFavoriteMovieAdapter extends RecyclerView.Adapter<ListFavoriteM
                 txtVotes;
         private final ImageView imgThumb;
 
-        public MovieHolder(View itemView) {
+        MovieHolder(View itemView) {
             super(itemView);
 
             txtTitle = itemView.findViewById(R.id.txt_movie_title);
@@ -111,14 +116,11 @@ public class ListFavoriteMovieAdapter extends RecyclerView.Adapter<ListFavoriteM
         public void onClick(View v) {
             postItemClick(this);
         }
+
         private void postItemClick(MovieHolder holder) {
             if (mOnItemClickListener != null) {
-                mOnItemClickListener.onItemClick(holder.itemView, holder.getAdapterPosition());
+                mOnItemClickListener.onItemClick(holder.getAdapterPosition());
             }
         }
-    }
-
-    public interface OnItemClickListener {
-        void onItemClick(View v, int position);
     }
 }

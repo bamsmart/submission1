@@ -5,6 +5,8 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
 
+import java.util.Objects;
+
 import learning.shinesdev.mylastmovie.api.APIError;
 import learning.shinesdev.mylastmovie.api.APIServiceMovie;
 import learning.shinesdev.mylastmovie.api.ApiUtils;
@@ -35,6 +37,7 @@ public class MovieRepository {
     public MutableLiveData<Movie> getDiscover(String lang, String key){
         final MutableLiveData<Movie> movieData = new MutableLiveData<>();
         serviceMovie.getDiscover(lang,key).enqueue(new Callback<Movie>() {
+            @SuppressWarnings("unused")
             @Override
             public void onResponse(@NonNull Call<Movie> call, @NonNull Response<Movie> response) {
                 if (response.isSuccessful()){
@@ -161,7 +164,7 @@ public class MovieRepository {
 
             @Override
             public void onFailure(@NonNull Call<MovieCredits> call, @NonNull Throwable t) {
-                Log.d("ON Failure",t.getMessage());
+                Log.d("ON Failure", Objects.requireNonNull(t.getMessage()));
             }
         });
         return movieCredit;

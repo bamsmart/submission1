@@ -1,7 +1,22 @@
 package learning.shinesdev.mylastmovie.model;
 
+import android.database.Cursor;
+
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
+import static learning.shinesdev.mylastmovie.database.DatabaseContract.TVShowColumns.ID;
+import static learning.shinesdev.mylastmovie.database.DatabaseContract.TVShowColumns.TITLE;
+import static learning.shinesdev.mylastmovie.database.DatabaseContract.TVShowColumns.DATE;
+import static learning.shinesdev.mylastmovie.database.DatabaseContract.TVShowColumns.OVERVIEW;
+import static learning.shinesdev.mylastmovie.database.DatabaseContract.TVShowColumns.IMAGE;
+import static learning.shinesdev.mylastmovie.database.DatabaseContract.TVShowColumns.RATING;
+import static learning.shinesdev.mylastmovie.database.DatabaseContract.TVShowColumns.VOTE;
+import static learning.shinesdev.mylastmovie.database.DatabaseContract.TVShowColumns.REVENUE;
+import static learning.shinesdev.mylastmovie.database.DatabaseContract.TVShowColumns.FAVORITE;
+import static learning.shinesdev.mylastmovie.database.DatabaseContract.getColumnInt;
+import static learning.shinesdev.mylastmovie.database.DatabaseContract.getColumnString;
+import static learning.shinesdev.mylastmovie.database.DatabaseContract.getColumnDouble;
+import static learning.shinesdev.mylastmovie.database.DatabaseContract.getColumnLong;
 
 public class TVShowRealm extends RealmObject {
     @PrimaryKey
@@ -85,5 +100,20 @@ public class TVShowRealm extends RealmObject {
 
     public void setFavorite(int favorite) {
         this.favorite = favorite;
+    }
+
+    public TVShowRealm(){
+
+    }
+    public TVShowRealm(Cursor cursor) {
+        this.id = getColumnInt(cursor, ID);
+        this.title = getColumnString(cursor, TITLE);
+        this.date = getColumnString(cursor,DATE);
+        this.overview = getColumnString(cursor, OVERVIEW);
+        this.rating = getColumnDouble(cursor, RATING);
+        this.image = getColumnString(cursor, IMAGE);
+        this.revenue = getColumnInt(cursor, REVENUE);
+        this.vote = getColumnInt(cursor, VOTE);
+        this.favorite = getColumnInt(cursor,FAVORITE);
     }
 }

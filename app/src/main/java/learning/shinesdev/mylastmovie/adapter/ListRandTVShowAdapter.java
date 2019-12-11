@@ -69,6 +69,7 @@ import static learning.shinesdev.mylastmovie.api.ApiUtils.IMG_URL;
 
         @SuppressWarnings("EmptyMethod")
         public interface OnItemClickCallback {
+            @SuppressWarnings({"WeakerAccess", "UnusedReturnValue"})
             void onItemClicked(TVShowModel data);
         }
         public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback) {

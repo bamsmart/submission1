@@ -1,5 +1,6 @@
 package learning.shinesdev.mylastmovie.services;
 
+import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -51,8 +52,8 @@ public class ReleaseReminderReceiver extends BroadcastReceiver {
         loadReleaseMovieFromServer(context);
     }
 
-    public void loadReleaseMovieFromServer(Context context){
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+    private void loadReleaseMovieFromServer(Context context){
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date cal = new Date();
         String strDate1 =dateFormat.format(cal);
         String strDate2 = dateFormat.format(cal);
@@ -67,7 +68,7 @@ public class ReleaseReminderReceiver extends BroadcastReceiver {
                         ArrayList<MovieModel> data = new ArrayList<>(Objects.requireNonNull(response.body()).getMovieList());
                         for(int i = 0 ; i < 3; i++){
                             stackNotif.add(new MovieModel(data.get(i).getId(),data.get(i).getTitle(), data.get(i).getOverview()));
-                            sendNotif(context,data.get(i).getId(),data.get(i).getTitle(), data.get(i).getOverview());
+                            sendNotif(context, data.get(i).getTitle(), data.get(i).getOverview());
                             idNotification++;
                         }
                     } catch (Exception e) {
@@ -113,7 +114,7 @@ public class ReleaseReminderReceiver extends BroadcastReceiver {
         Toast.makeText(context, "Repeating alarm dibatalkan", Toast.LENGTH_SHORT).show();
     }
 
-    private void sendNotif(Context context, int id, String title, String overview) {
+    private void sendNotif(Context context, String title, String overview) {
         NotificationManager mNotificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         Bitmap largeIcon = BitmapFactory.decodeResource(context.getResources(), R.drawable.ic_notifications_black_24dp);
         Intent intent = new Intent(context, MainActivity.class);

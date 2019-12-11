@@ -245,7 +245,7 @@ public class DetailMovieFragment extends Fragment {
             movieRealm.setFavorite(movieData.getFavorite());
 
             AddToFavorite(movieRealm);
-            Toast.makeText(getContext(), "Movie ID " + movieData.getId() + " berhasil ditambahkan", Toast.LENGTH_LONG).show();
+            Toast.makeText(getContext(), "Movie ID " + movieData.getTitle() + " berhasil ditambahkan", Toast.LENGTH_LONG).show();
         }
         return true;
     }

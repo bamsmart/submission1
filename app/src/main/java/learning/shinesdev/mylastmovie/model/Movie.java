@@ -44,7 +44,7 @@ public class Movie extends ViewModel implements Parcelable {
         mutableLiveData = movieRepository.getPopular(currLang, ApiUtils.API_KEY);
     }
 
-    public void search( String keySrc, String prevLang, String currLang) {
+    public void search(String keySrc, String currLang) {
         /*if (mutableLiveData != null && (prevLang.equals(currLang))) {
             return;
         }*/

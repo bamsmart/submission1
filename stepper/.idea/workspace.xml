@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4cfb8b86-d304-4073-93b2-932b70aa819a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/java/learning/shinesdev/mymovieextend/MovieFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/java/learning/shinesdev/mymovieextend/TVShowFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/java/learning/shinesdev/mymovieextend/adapter/ListMovieAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/java/learning/shinesdev/mymovieextend/adapter/ListTVShowAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/java/learning/shinesdev/mymovieextend/db/DatabaseContract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/java/learning/shinesdev/mymovieextend/entity/Movie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/java/learning/shinesdev/mymovieextend/entity/TVShow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/java/learning/shinesdev/mymovieextend/helper/GlobVar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/java/learning/shinesdev/mymovieextend/helper/MappingHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/drawable/ic_broken_image_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/drawable/ic_favorite_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/drawable/ic_favorite_movie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/drawable/ic_favorite_white_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/drawable/ic_featured_play_list_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/drawable/ic_home_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/drawable/ic_image_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/drawable/ic_live_tv_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/drawable/ic_mode_edit_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/drawable/ic_more_vert_white_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/drawable/ic_movie_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/drawable/ic_movie_filter_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/drawable/ic_notifications_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/drawable/ic_search_white_24px.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/drawable/ic_setting.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/drawable/ic_settings_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/drawable/silver_star.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/drawable/stars.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/layout/fragment_movie.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/layout/fragment_tvshow.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/layout/item_list_movies.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/layout/item_list_tv_show.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyMovieExtend/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebviewPullRefresh-master/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebviewPullRefresh-master/app/src/main/res/drawable/ic_photo_camera_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebviewPullRefresh-master/app/src/main/res/drawable/ic_photo_library_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebviewPullRefresh-master/app/src/main/res/layout/dialog_chooser_layout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/database/QueryCursorLoaderTVShow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/provider/CRUDMovie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/provider/CRUDTVShow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/provider/TVShowContentProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/provider/TVShowUpdateService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/widget/UpdateWidgetService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_favorite_movie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sample-homepage/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/activity/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/activity/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/activity/favorite/FavoriteMovieFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/activity/favorite/FavoriteMovieFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/activity/favorite/FavoritePagerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/activity/favorite/FavoritePagerAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/activity/favorite/FavoriteTVShowFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/activity/favorite/FavoriteTVShowFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/activity/movie/DetailMovieFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/activity/movie/DetailMovieFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/activity/movie/MovieFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/activity/movie/MovieFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/adapter/ListFavoriteMovieAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/adapter/ListFavoriteMovieAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/adapter/ListFavoriteTVShowAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/adapter/ListFavoriteTVShowAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/adapter/ListRandTVShowAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/adapter/ListRandTVShowAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/database/DatabaseContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/database/DatabaseContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/database/QueryCursorLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/database/QueryCursorLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/database/RealmMovieHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/database/RealmMovieHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/model/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/model/MovieRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/model/MovieRealm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/model/TVShowRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/model/TVShowRealm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/prefs/MyPreferenceFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/prefs/MyPreferenceFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/provider/MovieContentProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/provider/MovieContentProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/provider/MovieUpdateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/provider/MovieUpdateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/repository/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/repository/MovieRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/repository/TVShowRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/repository/TVShowRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/services/DailyReminderReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/services/DailyReminderReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/services/ReleaseReminderReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/services/ReleaseReminderReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/utils/ConnectionDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/utils/ConnectionDetector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/widget/MovieWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/widget/MovieWidget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/widget/StackRemoteViewsFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/learning/shinesdev/mylastmovie/widget/StackRemoteViewsFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/movie_widget.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/movie_widget.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-en/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/values-en/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-in/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/values-in/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/xml/movie_app_widget_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/xml/movie_app_widget_info.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_activity_activity_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_activity_activity_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_appcompat_appcompat_resources_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_appcompat_appcompat_resources_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_1_1_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_1_1_3_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_core_core_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_core_core_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_fragment_fragment_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_fragment_fragment_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_legacy_legacy_support_v4_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_legacy_legacy_support_v4_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_extensions_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_extensions_2_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_process_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_process_2_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_service_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_service_2_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_media_media_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_media_media_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_navigation_navigation_common_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_navigation_navigation_common_2_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_navigation_navigation_fragment_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_navigation_navigation_fragment_2_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_navigation_navigation_runtime_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_navigation_navigation_runtime_2_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_navigation_navigation_ui_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_navigation_navigation_ui_2_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_preference_preference_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_preference_preference_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_savedstate_savedstate_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_savedstate_savedstate_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_test_core_1_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_test_core_1_2_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_test_espresso_espresso_core_3_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_test_espresso_espresso_core_3_2_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_test_espresso_espresso_idling_resource_3_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_test_espresso_espresso_idling_resource_3_2_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_test_ext_junit_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_test_ext_junit_1_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_test_monitor_1_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_test_monitor_1_2_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_test_runner_1_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_test_runner_1_2_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_transition_transition_1_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_transition_transition_1_0_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__com_getkeepsafe_relinker_relinker_1_3_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__com_getkeepsafe_relinker_relinker_1_3_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__com_github_bumptech_glide_gifdecoder_4_10_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__com_github_bumptech_glide_gifdecoder_4_10_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__com_github_bumptech_glide_glide_4_10_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__com_github_bumptech_glide_glide_4_10_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__com_github_f0ris_sweetalert_library_1_5_6_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__com_github_f0ris_sweetalert_library_1_5_6_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__com_google_android_material_material_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__com_google_android_material_material_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__com_pnikosis_materialish_progress_1_7_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__com_pnikosis_materialish_progress_1_7_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__io_realm_realm_android_library_6_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/libraries/Gradle__io_realm_realm_android_library_6_0_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mylastmovie/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mylastmovie/.idea/vcs.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/dbnavigator.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="104" />
+    <option name="width" value="1680" />
+    <option name="height" value="976" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="Scope" currentSubView="Scope 'Problems'; set:Problems; class com.intellij.psi.search.scope.ProblemsScope" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="android.project.structure.last.selected" value="SDK Location" />
+    <property name="android.project.structure.proportion" value="0.15" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.capture" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4cfb8b86-d304-4073-93b2-932b70aa819a" name="Default Changelist" comment="" />
+      <created>1575666852973</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575666852973</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1680" height="976" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.32971668" />
+      <window_info id="Structure" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="Resources Explorer" />
+      <window_info id="DB Browser" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Captures" order="0" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="DB Execution Console" />
+      <window_info anchor="bottom" id="TODO" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Palette&#9;" />
+    </layout>
+  </component>
+</project>

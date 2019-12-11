@@ -9,15 +9,17 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
+import java.util.Objects;
+
 import learning.shinesdev.mylastmovie.database.DatabaseContract;
 
 public class MovieUpdateService extends IntentService {
     private static final String TAG = MovieUpdateService.class.getSimpleName();
-    public static final String ACTION_INSERT = TAG + ".INSERT";
-    public static final String ACTION_UPDATE = TAG + ".UPDATE";
-    public static final String ACTION_DELETE = TAG + ".DELETE";
+    private static final String ACTION_INSERT = TAG + ".INSERT";
+    private static final String ACTION_UPDATE = TAG + ".UPDATE";
+    private static final String ACTION_DELETE = TAG + ".DELETE";
 
-    public static final String EXTRA_VALUES = TAG + ".ContentValues";
+    private static final String EXTRA_VALUES = TAG + ".ContentValues";
 
     public MovieUpdateService(String name) {
         super(name);
@@ -28,7 +30,7 @@ public class MovieUpdateService extends IntentService {
     }
     @Override
     protected void onHandleIntent(@Nullable Intent intent) {
-        if (ACTION_INSERT.equals(intent.getAction())) {
+        if (ACTION_INSERT.equals(Objects.requireNonNull(intent).getAction())) {
             ContentValues values = intent.getParcelableExtra(EXTRA_VALUES);
             performInsert(values);
         } else if (ACTION_UPDATE.equals(intent.getAction())) {
@@ -62,8 +64,9 @@ public class MovieUpdateService extends IntentService {
     }
 
     private void performInsert(ContentValues values) {
-        if (getContentResolver().insert(DatabaseContract.CONTENT_URI, values) != null) {
+        if (getContentResolver().insert(DatabaseContract.CONTENT_URI_MOVIE, values) != null) {
             Log.d(TAG, "Inserted favorite movie "+values.get("title").toString());
+
         } else {
             Log.w(TAG, "Error inserting favorite movie");
         }
@@ -71,11 +74,13 @@ public class MovieUpdateService extends IntentService {
 
     private void performUpdate(Uri uri, ContentValues values) {
         int count = getContentResolver().update(uri, values, null, null);
+        getContentResolver().notifyChange(uri, null);
         Log.d(TAG, "Updated " + count + " task items");
     }
 
     private void performDelete(Uri uri) {
         int count = getContentResolver().delete(uri, null, null);
-        Log.d(TAG, "Deleted "+count+" tasks");
+        getContentResolver().notifyChange(uri, null);
+        Log.d(TAG, "Deleted "+count+"");
     }
 }

@@ -38,6 +38,7 @@ import retrofit2.Response;
 
 import static learning.shinesdev.mylastmovie.api.ApiUtils.API_KEY;
 
+@SuppressWarnings("WeakerAccess")
 public class DailyReminderReceiver extends BroadcastReceiver {
     private static final int NOTIFIY_DAILY_ID = 110;
     private final static int REMINDER_REPEAT_ID = 101;
@@ -103,6 +104,7 @@ public class DailyReminderReceiver extends BroadcastReceiver {
     public void showNotification(Context context,ArrayList<MovieModel>  data){
         String CHANNEL_ID = "Channel_1";
         String CHANNEL_NAME = "Job scheduler channel";
+
         Intent intent = new Intent(context, DetailMovieActivity.class);
         MovieModel mv = new MovieModel();
         mv.setId(data.get(0).getId());

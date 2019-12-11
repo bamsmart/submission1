@@ -4,21 +4,20 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Binder;
 import android.os.Bundle;
-import android.provider.UserDictionary;
-import android.util.Log;
 import android.widget.RemoteViews;
 import android.widget.RemoteViewsService;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import learning.shinesdev.mylastmovie.R;
+import learning.shinesdev.mylastmovie.api.ApiUtils;
 import learning.shinesdev.mylastmovie.database.DatabaseContract;
-import learning.shinesdev.mylastmovie.database.QueryCursorLoader;
-import learning.shinesdev.mylastmovie.model.MovieModel;
 import learning.shinesdev.mylastmovie.model.MovieRealm;
 
 
@@ -37,22 +36,23 @@ class StackRemoteViewsFactory implements RemoteViewsService.RemoteViewsFactory {
     @Override
     public void onDataSetChanged() {
         final long identityToken = Binder.clearCallingIdentity();
-        Cursor mCursor = null;
-
-        // querying ke database
-        mCursor = mContext.getContentResolver().query(DatabaseContract.CONTENT_URI, null, null, null, null);
-
-        Log.d("SIZE ",""+mCursor.getCount());
-
-        for (int i = 0; i < mCursor.getCount(); i++){
+        Cursor mCursor = mContext.getContentResolver().query(DatabaseContract.CONTENT_URI_MOVIE, null, null, null, null);
+        for (int i = 0; i < Objects.requireNonNull(mCursor).getCount(); i++) {
             mCursor.moveToPosition(i);
             MovieRealm movieModel = new MovieRealm(mCursor);
-            Log.d("",""+movieModel.getTitle());
+            String image_url = ApiUtils.IMG_URL + movieModel.getImage();
+            try {
+                Bitmap bitmap = Glide.with(mContext)
+                        .asBitmap()
+                        .load(image_url)
+                        .submit(512, 512)
+                        .get();
 
-            mWidgetItems.add(i,null);
+                mWidgetItems.add(i, bitmap);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
-
-
         Binder.restoreCallingIdentity(identityToken);
     }
 

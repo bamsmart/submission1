@@ -156,10 +156,11 @@ public class MovieFragment extends Fragment {
         progressBar.setVisibility(View.VISIBLE);
         ConnectionDetector conn = new ConnectionDetector(getContext());
         if (conn.isConnectingToInternet()) {
+            //noinspection unused
             String prevLang = session.getPrevLang();
             String currLang = Objects.requireNonNull(getActivity()).getResources().getString(R.string.language);
             Movie movie = ViewModelProviders.of(Objects.requireNonNull(getActivity())).get(Movie.class);
-            movie.search(keySrc, prevLang, currLang);
+            movie.search(keySrc, currLang);
             movie.getMovieRepository().observe(getActivity(), response -> {
                 progressBar.setVisibility(View.GONE);
                 data = response.getMovieList();

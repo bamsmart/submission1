@@ -3,14 +3,16 @@ package learning.shinesdev.mylastmovie.database;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.FileObserver;
 
 import androidx.loader.content.AsyncTaskLoader;
 
 public class QueryCursorLoader extends AsyncTaskLoader<Cursor> {
-    Cursor mCursor = null;
-    Context mContext;
-    Uri mUri;
-    String mSort;
+    private Cursor mCursor = null;
+    private final Context mContext;
+    private final Uri mUri;
+    private final String mSort;
+    private FileObserver mFileObserver;
 
     public QueryCursorLoader(Context context, Uri uri, String sortType) {
         super(context);
@@ -26,15 +28,16 @@ public class QueryCursorLoader extends AsyncTaskLoader<Cursor> {
 
     @Override
     protected void onStartLoading() {
-        if (mCursor != null) {
-            deliverResult(mCursor);
-        } else {
+        if (takeContentChanged() || mCursor == null) {
             forceLoad();
+        }else{
+            deliverResult(mCursor);
         }
     }
 
     public void deliverResult(Cursor data) {
         mCursor = data;
+        mContext.getContentResolver().notifyChange(mUri,null);
         super.deliverResult(data);
     }
 }

@@ -1,11 +1,6 @@
 package learning.shinesdev.mylastmovie.prefs;
 
-import android.app.job.JobInfo;
-import android.app.job.JobScheduler;
-import android.content.ComponentName;
-import android.content.Context;
 import android.content.SharedPreferences;
-import android.os.Build;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -84,26 +79,26 @@ public class MyPreferenceFragment extends PreferenceFragmentCompat implements Sh
     }
 
     private void startDailyJobReminder() {
-        String repeatTime = "10:20";
-        dailyReceiver.setRepeatingAlarm(getContext(),
+        String repeatTime = "07:00";
+        dailyReceiver.setRepeatingAlarm(Objects.requireNonNull(getContext()),
                 repeatTime);
         Toast.makeText(getContext(), "Daily Reminder started", Toast.LENGTH_SHORT).show();
     }
 
     private void startReleasedJobReminder() {
-        String repeatTime = "11:20";
-        releaseReceiver.setReleaseReminder(getContext(),
+        String repeatTime = "08:00";
+        releaseReceiver.setReleaseReminder(Objects.requireNonNull(getContext()),
                 repeatTime);
         Toast.makeText(getContext(), "Release Reminder Started", Toast.LENGTH_SHORT).show();
     }
 
     private void cancelDailyJobReminder() {
-        dailyReceiver.cancelDailyReminder(getContext());
+        dailyReceiver.cancelDailyReminder(Objects.requireNonNull(getContext()));
         Toast.makeText(getContext(), "Release Reminder Stop!", Toast.LENGTH_SHORT).show();
     }
 
     private void cancelReleasedJobReminder() {
-        releaseReceiver.cancelReleaseReminder(getContext());
+        releaseReceiver.cancelReleaseReminder(Objects.requireNonNull(getContext()));
         Toast.makeText(getContext(), "Release Reminder Stop!", Toast.LENGTH_SHORT).show();
     }
 

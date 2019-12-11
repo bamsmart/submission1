@@ -1,6 +1,7 @@
 package learning.shinesdev.mylastmovie.adapter;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,27 +16,22 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 import learning.shinesdev.mylastmovie.R;
+import learning.shinesdev.mylastmovie.model.MovieRealm;
 import learning.shinesdev.mylastmovie.model.TVShowRealm;
 
 import static learning.shinesdev.mylastmovie.api.ApiUtils.IMG_URL;
 
-public class ListFavoriteTVShowAdapter extends RecyclerView.Adapter<ListFavoriteTVShowAdapter.ListViewHolder> {
+public class ListFavoriteTVShowAdapter extends RecyclerView.Adapter<ListFavoriteTVShowAdapter.ListViewHolder>{
     private final Context context;
-    private OnItemClickCallback onItemClickCallback;
+    private Cursor mCursor;
+    private onItemClickListener mOnItemClickListener;
 
-    public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback) {
-        this.onItemClickCallback = onItemClickCallback;
-    }
-
-    public void setOnLongClickListener(OnItemClickCallback onItemClickCallback) {
-        this.onItemClickCallback = onItemClickCallback;
-    }
-
-    private final List<TVShowRealm> listTVShow;
-
-    public ListFavoriteTVShowAdapter(Context context, List<TVShowRealm> list) {
+    public ListFavoriteTVShowAdapter(Context context) {
         this.context = context;
-        this.listTVShow = list;
+    }
+
+    public void setOnItemClickListener(onItemClickListener listener) {
+        mOnItemClickListener = listener;
     }
 
     @NonNull
@@ -47,7 +43,9 @@ public class ListFavoriteTVShowAdapter extends RecyclerView.Adapter<ListFavorite
 
     @Override
     public void onBindViewHolder(@NonNull final ListFavoriteTVShowAdapter.ListViewHolder holder, int position) {
-        TVShowRealm tvshow = listTVShow.get(position);
+        mCursor.moveToPosition(position);
+        TVShowRealm tvshow = new TVShowRealm(mCursor);
+
         holder.txtTitle.setText(tvshow.getTitle());
         holder.txtYear.setText(tvshow.getDate());
         holder.txtOverview.setText(tvshow.getOverview());
@@ -63,26 +61,33 @@ public class ListFavoriteTVShowAdapter extends RecyclerView.Adapter<ListFavorite
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        holder.itemView.setOnClickListener(v -> onItemClickCallback.onItemClicked(listTVShow.get(holder.getAdapterPosition())));
-
-        holder.itemView.setOnLongClickListener(view -> {
-            onItemClickCallback.onItemClicked(listTVShow.get(holder.getAdapterPosition()));
-            return true;// returning true instead of false, works for me
-        });
-
-    }
-
-    public interface OnItemClickCallback {
-        void onItemClicked(TVShowRealm data);
     }
 
     @Override
     public int getItemCount() {
-        return listTVShow.size();
+        return (mCursor != null) ? mCursor.getCount() : 0;
     }
 
-    class ListViewHolder extends RecyclerView.ViewHolder {
+    public interface onItemClickListener {
+        void onItemClick(int position);
+    }
+
+    public void swapCursor(Cursor c) {
+        if (mCursor != null) {
+            mCursor.close();
+        }
+        mCursor = c;
+        notifyDataSetChanged();
+    }
+
+    public TVShowRealm getItem(int position) {
+        if (!mCursor.moveToPosition(position)) {
+            throw new IllegalStateException("Invalid item position requested");
+        }
+        return new TVShowRealm(mCursor);
+    }
+
+    public class ListViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private final TextView
                 txtTitle,
@@ -101,6 +106,19 @@ public class ListFavoriteTVShowAdapter extends RecyclerView.Adapter<ListFavorite
             txtOverview = itemView.findViewById(R.id.txt_movie_sinopsis);
             txtVotes = itemView.findViewById(R.id.txt_movie_votes);
             imgThumb = itemView.findViewById(R.id.img_movie_thumb);
+
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            postItemClick(this);
+        }
+
+        private void postItemClick(ListViewHolder holder) {
+            if (mOnItemClickListener != null) {
+                mOnItemClickListener.onItemClick(holder.getAdapterPosition());
+            }
         }
     }
 }

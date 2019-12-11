@@ -31,7 +31,7 @@ public class MovieRealm extends RealmObject implements Parcelable {
 
     }
 
-    protected MovieRealm(Parcel in) {
+    private MovieRealm(Parcel in) {
         id = in.readInt();
         title = in.readString();
         date = in.readString();

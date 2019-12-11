@@ -1,8 +1,14 @@
 package learning.shinesdev.mylastmovie.activity;
 
+import android.app.job.JobInfo;
+import android.app.job.JobScheduler;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -20,6 +26,7 @@ import java.util.Objects;
 
 import learning.shinesdev.mylastmovie.R;
 import learning.shinesdev.mylastmovie.utils.SessionManager;
+import learning.shinesdev.mylastmovie.widget.UpdateWidgetService;
 
 public class MainActivity extends AppCompatActivity {
     private SessionManager session;
@@ -29,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         session = new SessionManager(getApplicationContext());
 
+        startJob();
         setContentView(R.layout.activity_main);
         Objects.requireNonNull(getSupportActionBar()).setTitle("");
         BottomNavigationView navView = findViewById(R.id.nav_view);
@@ -40,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+
     }
 
     @Override
@@ -66,5 +75,23 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         return true;
+    }
+
+
+    private void startJob() {
+        final int JOB_ID = 2001;
+        ComponentName mServiceComponent = new ComponentName(this, UpdateWidgetService.class);
+        JobInfo.Builder builder = new JobInfo.Builder(JOB_ID, mServiceComponent);
+        builder.setRequiredNetworkType(JobInfo.NETWORK_TYPE_NONE);
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            builder.setPeriodic(900000); //15 menit
+        } else {
+            builder.setPeriodic(86000); //3 menit
+        }
+        JobScheduler jobScheduler = (JobScheduler) getSystemService(Context.JOB_SCHEDULER_SERVICE);
+        if (jobScheduler != null) {
+            jobScheduler.schedule(builder.build());
+        }
+        Log.d("WIDGET UPDATE SERVICES","Service Started!");
     }
 }

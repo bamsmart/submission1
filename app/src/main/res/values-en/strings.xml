@@ -51,7 +51,6 @@
     <string name="preferences">preferences</string>
     <string name="search_movie_hint">type film name</string>
     <string name="search_tv_hint">type tv show name</string>
-    <string name="appwidget_text">STAR WARS BANNER</string>
     <string name="empty_text">NO DATA</string>
     <string name="add_widget">Add widget</string>
 

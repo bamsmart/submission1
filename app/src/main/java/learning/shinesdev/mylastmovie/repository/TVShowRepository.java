@@ -5,6 +5,8 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
 
+import java.util.Objects;
+
 import learning.shinesdev.mylastmovie.api.APIServiceTVShow;
 import learning.shinesdev.mylastmovie.api.ApiUtils;
 import learning.shinesdev.mylastmovie.model.TVShow;
@@ -115,7 +117,7 @@ public class TVShowRepository {
 
             @Override
             public void onFailure(@NonNull Call<TVShowCredits> call, @NonNull Throwable t) {
-                Log.d("ON Failure",t.getMessage());
+                Log.d("ON Failure", Objects.requireNonNull(t.getMessage()));
             }
         });
         return tvShowCredit;
