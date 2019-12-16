@@ -1,0 +1,106 @@
+<resources>
+    <string name="app_name">submission1</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_activity_detail_course">Detail Course</string>
+
+    <string name="description">Description</string>
+    <string name="dateline">Dateline</string>
+    <string name="description_module">Deskripsi Modul</string>
+    <string name="example">Example</string>
+    <string name="start_learn">Mulai Belajar</string>
+    <string name="list_module">Daftar Modul</string>
+    <string name="home">Home</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="menu_bookmark">bookmark</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="last_seen">Terakhir dilihat</string>
+    <string name="message_undo">Batalkan menghapus item sebelumnya?</string>
+    <string name="message_ok">OK</string>
+
+    <string name="language">en-US</string>
+    <string name="tab_text_1">Movies</string>
+    <string name="tab_text_2">TV Shows</string>
+    <string name="tab_text_3">Favorite</string>
+    <string name="lbl_header_reminder_setting">Reminder Setting</string>
+    <string name="lbl_movie_title">Title</string>
+    <string name="lbl_movie_year">Year</string>
+    <string name="txt_movie_rate">Rate </string>
+    <string name="lbl_movie_overview">Overview</string>
+    <string name="lbl_movie_stars">Stars</string>
+    <string name="lbl_movie_votes">Votes</string>
+    <string name="lbl_movie_gross">Gross</string>
+
+    <string name="lbl_tv_title">Title</string>
+    <string name="lbl_tv_year">Year</string>
+    <string name="lbl_tv_genre">Action, Thriller</string>
+    <string name="lbl_tv_overview">Overview</string>
+    <string name="lbl_tv_stars">Stars</string>
+    <string name="lbl_tv_votes">Votes</string>
+
+    <string name="txt_movie_title">Title</string>
+    <string name="txt_movie_synopsis">As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.</string>
+    <string name="txt_movie_stars">Robert Downey Jr.</string>
+    <string name="txt_movie_votes">6.7</string>
+    <string name="txt_movie_year">2018</string>
+
+
+    <string name="separator"> | </string>
+    <string name="lbl_stars">Stars : </string>
+    <string name="votes">Votes: </string>
+    <string name="jacob_cedergren">Jacob Cedergren</string>
+    <string name="r">R</string>
+    <string name="_31_523">31,523</string>
+    <string name="todo">TODO</string>
+    <string name="_7_5">7.5</string>
+    <string name="_85_min">85 min</string>
+
+    <string name="lbl_header_movie_detail">Movie Detail </string>
+    <string name="lbl_header_tv_detail">TV Show Detail </string>
+    <string name="lbl_image_desc">Description</string>
+    <string name="lbl_rating">Rating</string>
+    <string name="title">Title</string>
+    <string name="title_activity_favorite">Favorite</string>
+    <string name="koneksi">No internet connection!</string>
+    <string name="message">is added to favorite!</string>
+    <string name="search">search</string>
+    <string name="setting">setting</string>
+    <string name="preferences">preferences</string>
+    <string name="search_movie_hint">type film name</string>
+    <string name="search_tv_hint">type tv show name</string>
+    <string name="add_widget">Add widget</string>
+    <string name="appwidget_text">My Favorite</string>
+    <string name="empty_text">NO DATA</string>
+
+    <string name="release_reminder_key">RELEASE</string>
+    <string name="release_reminder_title">Release Reminder</string>
+    <string name="release_reminder_desc">Reminder showing the movie release</string>
+    <string name="daily_reminder_key">DAILY</string>
+    <string name="daily_reminder_title">Daily Reminder</string>
+    <string name="daily_reminder_desc">Reminder for return to app</string>
+
+    <string name="pref_sortBy_key" translatable="false">sort</string>
+    <string name="pref_sortBy_default" translatable="false">default</string>
+    <string name="pref_sortBy_due" translatable="false">due</string>
+
+    <string name="release_alarm_activate">Movie release reminder activated!</string>
+    <string name="release_alarm_cancel">Movie release reminder deactivated!</string>
+    <string name="daily_alarm_activate">Daily Reminder activated!</string>
+    <string name="daily_alarm_cancel">Daily Reminder deactivated!</string>
+
+    <!--Delete Confirm-->
+    <string name="text_del_confirm">Are you sure?</string>
+    <string name="text_del_warning">Won`t be able to recover this data</string>
+    <string name="text_del_yes">Yes, delete it</string>
+    <string name="text_btn_cancel">Cancel</string>
+
+
+    <string name="notif_title">Catalogue Movie</string>
+    <string name="notif_content">Catalogue movie missing you!</string>
+</resources>
