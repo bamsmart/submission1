@@ -18,6 +18,7 @@ import java.util.List;
 
 import learning.shinescdev.jetpack.R;
 import learning.shinescdev.jetpack.data.source.local.entity.TVEntity;
+import learning.shinescdev.jetpack.ui.detail.DetailMovieActivity;
 import learning.shinescdev.jetpack.utils.GlideApp;
 import learning.shinescdev.jetpack.utils.GlobVar;
 

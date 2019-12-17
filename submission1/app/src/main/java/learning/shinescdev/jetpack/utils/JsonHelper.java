@@ -62,9 +62,70 @@ public class JsonHelper {
             }
         } catch (JSONException e) {
             e.printStackTrace();
-            Log.d(TAG,"ERROR");
         }
 
+        return list;
+    }
+
+    public List<MovieResponse> loadMovieById(int id){
+        ArrayList<MovieResponse> list = new ArrayList<>();
+
+        try {
+            JSONObject rensponseObject = new JSONObject(parsingFileToString("movie.json"));
+            JSONArray listArray = rensponseObject.getJSONArray("results");
+
+            for (int i = 0 ; i < listArray.length(); i++){
+                JSONObject movie = listArray.getJSONObject(i);
+                if(movie.getInt("id") == id){
+                    String title = movie.getString("title");
+                    String date = movie.getString("release_date");
+                    String overview = movie.getString("overview");
+                    String img = movie.getString("poster_path");
+                    Double rating = movie.getDouble("popularity");
+                    int vote = movie.getInt("vote_count");
+                    Double revenue = 0.0;
+                    int favorite = 0;
+
+                    MovieResponse movieResponse = new MovieResponse(id, title, date, overview, img, rating, vote, revenue, favorite);
+                    list.add(movieResponse);
+                }
+            }
+
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+
+        return list;
+    }
+
+    public List<MovieResponse> loadRecommMovie(int id){
+        ArrayList<MovieResponse> list = new ArrayList<>();
+        try{
+            JSONObject responseObject = new JSONObject(parsingFileToString("movie.json"));
+            JSONArray listArray = responseObject.getJSONArray("results");
+
+            for (int i = 0 ; i < listArray.length(); i++){
+               JSONObject movie = listArray.getJSONObject(i);
+                int newId = movie.getInt("id");
+               if(newId != id) {
+                   String title = movie.getString("title");
+                   String date = movie.getString("release_date");
+                   String overview = movie.getString("overview");
+                   String img = movie.getString("poster_path");
+                   Double rating = movie.getDouble("popularity");
+                   int vote = movie.getInt("vote_count");
+                   Double revenue = 0.0;
+                   int favorite = 0;
+
+                   MovieResponse movieResponse = new MovieResponse(newId, title, date, overview, img, rating, vote, revenue, favorite);
+                   list.add(movieResponse);
+               }
+
+            }
+
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
         return list;
     }
 

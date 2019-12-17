@@ -34,6 +34,10 @@ public class LocalRepository {
         return mMovieDao.getMovies();
     }
 
+    public LiveData<List<MovieEntity>> getMovieById(int id){
+        return mMovieDao.getMovieById(id);
+    }
+
     public void setFavoriteMovie(MovieEntity movie, int newState){
         movie.setFavorite(newState);
         mMovieDao.updateMovie(movie);

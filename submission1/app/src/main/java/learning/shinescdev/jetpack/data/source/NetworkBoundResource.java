@@ -10,6 +10,7 @@ import learning.shinescdev.jetpack.vo.Resource;
 public abstract class NetworkBoundResource<ResultType, RequestType> {
 
     private MediatorLiveData<Resource<ResultType>> result = new MediatorLiveData<>();
+
     private AppExecutors mExecutors;
 
     protected void onFecthFailed() {

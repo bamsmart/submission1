@@ -1,8 +1,7 @@
-package learning.shinescdev.jetpack.ui.movie;
+package learning.shinescdev.jetpack.ui.detail;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,15 +18,14 @@ import java.util.List;
 
 import learning.shinescdev.jetpack.R;
 import learning.shinescdev.jetpack.data.source.local.entity.MovieEntity;
-import learning.shinescdev.jetpack.ui.detail.DetailMovieActivity;
 import learning.shinescdev.jetpack.utils.GlideApp;
 import learning.shinescdev.jetpack.utils.GlobVar;
 
-public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHolder> {
+public class DetailMovieAdapter extends RecyclerView.Adapter<DetailMovieAdapter.MovieViewHolder> {
     private final Activity activity;
     private List<MovieEntity> mMovie = new ArrayList<>();
 
-    MovieAdapter(Activity activity) {
+    DetailMovieAdapter(Activity activity) {
         this.activity = activity;
     }
 
@@ -35,27 +33,22 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         return mMovie;
     }
 
-    void setListMovies(List<MovieEntity> listCourses) {
-        if (listCourses == null) return;
+    void setListMovies(List<MovieEntity> listMovies) {
+        if (listMovies == null) return;
         this.mMovie.clear();
-        this.mMovie.addAll(listCourses);
+        this.mMovie.addAll(listMovies);
     }
 
     @NonNull
     @Override
     public MovieViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_movies, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_random, parent, false);
         return new MovieViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull final MovieViewHolder holder, int idx) {
         holder.txtTitle.setText(getListMovies().get(idx).getTitle());
-        holder.txtYear.setText(getListMovies().get(idx).getDate());
-        holder.txtOverview.setText(getListMovies().get(idx).getOverview());
-        holder.txtRate.setText(String.valueOf(getListMovies().get(idx).getRating()));
-        holder.txtVotes.setText(String.valueOf(getListMovies().get(idx).getVote()));
-
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(activity, DetailMovieActivity.class);
             intent.putExtra(DetailMovieActivity.EXTRA_MOVIE_ID, getListMovies().get(idx).getId());
@@ -79,21 +72,13 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
 
     class MovieViewHolder extends RecyclerView.ViewHolder {
         private final TextView
-                txtTitle,
-                txtYear,
-                txtRate,
-                txtOverview,
-                txtVotes;
+                txtTitle;
         private final ImageView imgThumb;
 
         MovieViewHolder(View itemView) {
             super(itemView);
-            txtTitle = itemView.findViewById(R.id.txt_movie_title);
-            txtYear = itemView.findViewById(R.id.txt_movie_year);
-            txtRate = itemView.findViewById(R.id.txt_movie_rating);
-            txtOverview = itemView.findViewById(R.id.txt_movie_sinopsis);
-            txtVotes = itemView.findViewById(R.id.txt_movie_votes);
-            imgThumb = itemView.findViewById(R.id.img_movie_thumb);
+            txtTitle = itemView.findViewById(R.id.txt_title);
+            imgThumb = itemView.findViewById(R.id.img_thumb);
         }
     }
 }

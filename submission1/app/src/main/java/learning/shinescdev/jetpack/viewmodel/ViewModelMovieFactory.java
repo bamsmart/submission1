@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider;
 import learning.shinescdev.jetpack.data.source.MovieRepository;
 import learning.shinescdev.jetpack.data.source.TVRepository;
 import learning.shinescdev.jetpack.di.Injection;
+import learning.shinescdev.jetpack.ui.detail.DetailMovieViewModel;
 import learning.shinescdev.jetpack.ui.movie.MovieViewModel;
 
 public class ViewModelMovieFactory extends ViewModelProvider.NewInstanceFactory {
@@ -38,17 +39,16 @@ public class ViewModelMovieFactory extends ViewModelProvider.NewInstanceFactory 
         if (modelClass.isAssignableFrom(MovieViewModel.class)) {
             //noinspection unchecked
             return (T) new MovieViewModel(mMovieRepository);
-        /*else if (modelClass.isAssignableFrom(DetailCourseViewModel.class)) {
+        }else if (modelClass.isAssignableFrom(DetailMovieViewModel.class)) {
             //noinspection unchecked
-            return (T) new DetailCourseViewModel(mAcademyRepository);
-        } else if (modelClass.isAssignableFrom(BookmarkViewModel.class)) {
+            return (T) new DetailMovieViewModel(mMovieRepository);
+        }/*else if (modelClass.isAssignableFrom(BookmarkViewModel.class)) {
             //noinspection unchecked
             return (T) new BookmarkViewModel(mAcademyRepository);
         } else if (modelClass.isAssignableFrom(CourseReaderViewModel.class)) {
             //noinspection unchecked
             return (T) new CourseReaderViewModel(mAcademyRepository);
         }*/
-        }
 
         throw new IllegalArgumentException("Unknown ViewModel class: " + modelClass.getName());
     }
