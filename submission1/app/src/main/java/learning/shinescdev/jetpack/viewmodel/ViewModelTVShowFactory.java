@@ -11,6 +11,7 @@ import learning.shinescdev.jetpack.data.source.TVRepository;
 import learning.shinescdev.jetpack.di.Injection;
 import learning.shinescdev.jetpack.ui.movie.MovieViewModel;
 import learning.shinescdev.jetpack.ui.tv.TVViewModel;
+import learning.shinescdev.jetpack.ui.tv.detail.DetailTVViewModel;
 
 public class ViewModelTVShowFactory extends ViewModelProvider.NewInstanceFactory {
     private static volatile ViewModelTVShowFactory INSTANCE;
@@ -36,11 +37,11 @@ public class ViewModelTVShowFactory extends ViewModelProvider.NewInstanceFactory
     public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
 
         if(modelClass.isAssignableFrom(TVViewModel.class)) {
-            return  (T) new TVViewModel(mTVRepository);
-        /*else if (modelClass.isAssignableFrom(DetailCourseViewModel.class)) {
+            return (T) new TVViewModel(mTVRepository);
+        }else if (modelClass.isAssignableFrom(DetailTVViewModel.class)) {
             //noinspection unchecked
-            return (T) new DetailCourseViewModel(mAcademyRepository);
-        } else if (modelClass.isAssignableFrom(BookmarkViewModel.class)) {
+            return (T) new DetailTVViewModel(mTVRepository);
+        /* else if (modelClass.isAssignableFrom(BookmarkViewModel.class)) {
             //noinspection unchecked
             return (T) new BookmarkViewModel(mAcademyRepository);
         } else if (modelClass.isAssignableFrom(CourseReaderViewModel.class)) {

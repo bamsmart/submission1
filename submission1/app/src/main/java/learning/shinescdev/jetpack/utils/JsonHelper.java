@@ -158,4 +158,70 @@ public class JsonHelper {
 
         return list;
     }
+
+    public List<TVResponse> loadTVShowById(int id){
+        ArrayList<TVResponse> list = new ArrayList<>();
+
+        try {
+            JSONObject rensponseObject = new JSONObject(parsingFileToString("tv.json"));
+            JSONArray listArray = rensponseObject.getJSONArray("results");
+
+            for (int i = 0 ; i < listArray.length(); i++){
+                JSONObject tvshow = listArray.getJSONObject(i);
+                if(tvshow.getInt("id") == id){
+                    String title = tvshow.getString("title");
+                    String date = tvshow.getString("release_date");
+                    String overview = tvshow.getString("overview");
+                    String img = tvshow.getString("poster_path");
+                    Double rating = tvshow.getDouble("popularity");
+                    int vote = tvshow.getInt("vote_count");
+                    Double revenue = 0.0;
+                    int favorite = 0;
+
+                    Log.d(TAG, overview);
+
+                    TVResponse response = new TVResponse(id, title, date, overview, img, rating, vote, revenue, favorite);
+                    list.add(response);
+                }
+            }
+
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+
+        return list;
+    }
+
+    public List<TVResponse> loadRecommTVShow(int id){
+        Log.d(TAG, "loadRecommTVShow");
+
+        ArrayList<TVResponse> list = new ArrayList<>();
+        try{
+            JSONObject responseObject = new JSONObject(parsingFileToString("tv.json"));
+            JSONArray listArray = responseObject.getJSONArray("results");
+
+            for (int i = 0 ; i < listArray.length(); i++){
+                JSONObject tvshow = listArray.getJSONObject(i);
+                int newId = tvshow.getInt("id");
+                if(newId != id) {
+                    String title = tvshow.getString("title");
+                    String date = tvshow.getString("release_date");
+                    String overview = tvshow.getString("overview");
+                    String img = tvshow.getString("poster_path");
+                    Double rating = tvshow.getDouble("popularity");
+                    int vote = tvshow.getInt("vote_count");
+                    Double revenue = 0.0;
+                    int favorite = 0;
+
+                    TVResponse response = new TVResponse(newId, title, date, overview, img, rating, vote, revenue, favorite);
+                    list.add(response);
+                }
+
+            }
+
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+        return list;
+    }
 }

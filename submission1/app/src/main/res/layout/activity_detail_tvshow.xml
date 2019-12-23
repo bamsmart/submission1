@@ -2,10 +2,9 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="learning.shinescdev.jetpack.ui.detail.DetailMovieActivity">
+    tools:context=".ui.tv.detail.DetailTVActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -25,9 +24,10 @@
 
         <TextView
             android:id="@+id/lbl_title"
+            style="@style/TextContent.Title"
             android:layout_width="0dp"
             android:layout_marginStart="8dp"
-            android:text="@string/lbl_tv_title"
+            android:text="@string/lbl_movie_title"
             app:layout_constraintBottom_toBottomOf="@+id/img_tv_thumb"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.05"
@@ -37,9 +37,9 @@
 
         <TextView
             android:id="@+id/txt_tv_title"
+            style="@style/TextContent.SubTitle"
             android:layout_width="0dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="4dp"
             android:text="@string/txt_movie_title"
             app:layout_constraintBottom_toBottomOf="@+id/img_tv_thumb"
             app:layout_constraintEnd_toEndOf="parent"
@@ -50,10 +50,11 @@
 
         <TextView
             android:id="@+id/lbl_year"
+            style="@style/TextContent.Title"
             android:layout_width="0dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="@string/lbl_tv_year"
+            android:text="@string/lbl_movie_year"
             app:layout_constraintBottom_toBottomOf="@+id/img_tv_thumb"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.05"
@@ -63,9 +64,9 @@
 
         <TextView
             android:id="@+id/txt_tv_year"
+            style="@style/TextContent.SubTitle"
             android:layout_width="0dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="4dp"
             android:text="@string/txt_movie_year"
             app:layout_constraintBottom_toBottomOf="@+id/img_tv_thumb"
             app:layout_constraintEnd_toEndOf="parent"
@@ -76,10 +77,11 @@
 
         <TextView
             android:id="@+id/lbl_star"
+            style="@style/TextContent.Title"
             android:layout_width="0dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="@string/lbl_tv_stars"
+            android:text="@string/lbl_movie_stars"
             app:layout_constraintBottom_toBottomOf="@+id/img_tv_thumb"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.05"
@@ -89,10 +91,10 @@
 
         <TextView
             android:id="@+id/txt_tv_stars"
+            style="@style/TextContent.SubTitle1"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="4dp"
             android:scaleType="fitStart"
             android:text="@string/txt_movie_stars"
             app:layout_constraintBottom_toBottomOf="@+id/img_tv_thumb"
@@ -109,20 +111,23 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/img_tv_thumb"
             tools:listitem="@layout/item_list_detail_random" />
 
         <TextView
             android:id="@+id/lbl_overview"
+            style="@style/TextContent.Title"
             android:layout_marginStart="12dp"
             android:layout_marginTop="8dp"
-            android:text="@string/lbl_tv_overview"
+            android:text="@string/lbl_movie_overview"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rv_detail_tv" />
 
         <TextView
             android:id="@+id/txt_tv_synopsis"
+            style="@style/TextContent.SubTitle1"
             android:layout_marginStart="12dp"
             android:layout_marginTop="4dp"
             android:text="@string/txt_movie_synopsis"
@@ -131,18 +136,51 @@
 
         <TextView
             android:id="@+id/lbl_tv_votes"
+            style="@style/TextContent.Title"
+            android:layout_width="150dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="10dp"
-            android:text="@string/lbl_tv_votes"
+            android:text="@string/lbl_movie_votes"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_tv_synopsis" />
 
         <TextView
             android:id="@+id/txt_tv_votes"
-            android:layout_marginStart="12dp"
+            style="@style/TextContent.SubTitle"
+            android:layout_width="150dp"
+            android:layout_marginStart="8dp"
             android:text="@string/txt_movie_votes"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lbl_tv_votes" />
+
+        <TextView
+            android:id="@+id/lbl_tv_gross"
+            style="@style/TextContent.Title"
+            android:layout_width="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/lbl_movie_gross"
+            app:layout_constraintBottom_toBottomOf="@+id/lbl_tv_votes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintRight_toRightOf="@id/lbl_tv_votes"
+            app:layout_constraintStart_toEndOf="@+id/lbl_tv_votes"
+            app:layout_constraintTop_toBottomOf="@+id/txt_tv_synopsis"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/txt_tv_gross"
+            style="@style/TextContent.SubTitle"
+            android:layout_width="0dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/lbl_movie_gross"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_tv_votes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintRight_toRightOf="@id/txt_tv_votes"
+            app:layout_constraintStart_toEndOf="@+id/txt_tv_votes"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_tv_gross"
+            app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

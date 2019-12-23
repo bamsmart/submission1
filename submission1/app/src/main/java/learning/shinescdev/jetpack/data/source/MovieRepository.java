@@ -116,4 +116,47 @@ public class MovieRepository implements MovieDataSource {
             }
         }.asLiveData();
     }
+
+    @Override
+    public LiveData<Resource<List<MovieEntity>>> getMovieRecomm(int movieId) {
+        return new NetworkBoundResource<List<MovieEntity>, List<MovieResponse>>(appExecutors){
+
+            @Override
+            protected LiveData<List<MovieEntity>> loadFromDB() {
+                return localRepository.getMovieRecomm(movieId);
+            }
+
+            @Override
+            protected Boolean shouldFetch(List<MovieEntity> data) {
+                return (data == null || data.size() == 0);
+            }
+
+            @Override
+            protected LiveData<APIResponse<List<MovieResponse>>> createCall() {
+                return remoteRepository.getMovieRecomm(movieId);
+            }
+
+            @Override
+            protected void saveCallResult(List<MovieResponse> data) {
+
+                List<MovieEntity> movieEntities = new ArrayList<>();
+
+                for (MovieResponse movieResponse : data) {
+
+                    movieEntities.add(new MovieEntity(
+                            movieResponse.getId(),
+                            movieResponse.getTitle(),
+                            movieResponse.getDate(),
+                            movieResponse.getOverview(),
+                            movieResponse.getImage(),
+                            movieResponse.getRating(),
+                            movieResponse.getVote(),
+                            movieResponse.getRevenue(),
+                            movieResponse.getFavorite()));
+                }
+
+                localRepository.insertMovie(movieEntities);
+            }
+        }.asLiveData();
+    }
 }

@@ -13,5 +13,5 @@ public interface MovieDataSource {
 
     LiveData<Resource<List<MovieEntity>>> getMovieById(int id);
 
-    // ada perubahan
+    LiveData<Resource<List<MovieEntity>>> getMovieRecomm(int movieId);
 }

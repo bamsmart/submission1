@@ -1,12 +1,14 @@
 package learning.shinescdev.jetpack.data.source.remote;
 
 import android.os.Handler;
+import android.util.Log;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import java.util.List;
 
+import learning.shinescdev.jetpack.data.source.local.entity.MovieEntity;
 import learning.shinescdev.jetpack.data.source.remote.response.MovieResponse;
 import learning.shinescdev.jetpack.data.source.remote.response.TVResponse;
 import learning.shinescdev.jetpack.utils.EspressoIdlingResource;
@@ -63,6 +65,21 @@ public class RemoteRepository {
         return resultMovie;
     }
 
+    public LiveData<APIResponse<List<MovieResponse>>> getMovieRecomm(int movieId){
+        EspressoIdlingResource.increment();
+        MutableLiveData<APIResponse<List<MovieResponse>>> result = new MutableLiveData<>();
+
+        Handler handler = new Handler();
+        handler.postDelayed(() -> {
+                result.setValue(APIResponse.success(jsonHelper.loadRecommMovie(movieId)));
+                if (EspressoIdlingResource.getEspressoIdlingResource().isIdleNow()){
+                    EspressoIdlingResource.decrement();
+                }
+        }, SERVICE_LATENCY_IN_MILIS);
+
+        return result;
+    }
+
 
     public LiveData<APIResponse<List<TVResponse>>> getAllTVShowLiveData() {
         EspressoIdlingResource.increment();
@@ -75,5 +92,38 @@ public class RemoteRepository {
         }, SERVICE_LATENCY_IN_MILIS);
 
         return resultTVShow;
+    }
+
+    public LiveData<APIResponse<List<TVResponse>>> getTVShowRecomm(int tvShowId){
+        EspressoIdlingResource.increment();
+        MutableLiveData<APIResponse<List<TVResponse>>> result = new MutableLiveData<>();
+
+        Handler handler = new Handler();
+        handler.postDelayed(() -> {
+            result.setValue(APIResponse.success(jsonHelper.loadRecommTVShow(tvShowId)));
+            if (EspressoIdlingResource.getEspressoIdlingResource().isIdleNow()){
+                EspressoIdlingResource.decrement();
+            }
+        }, SERVICE_LATENCY_IN_MILIS);
+
+        return result;
+    }
+
+    public LiveData<APIResponse<List<TVResponse>>> getTVShowById(int tvShowId) {
+        EspressoIdlingResource.increment();
+        MutableLiveData<APIResponse<List<TVResponse>>> results = new MutableLiveData<>();
+
+        Handler handler = new Handler();
+        handler.postDelayed(() -> {
+            results.setValue(APIResponse.success(jsonHelper.loadTVShowById(tvShowId)));
+                    if (EspressoIdlingResource.getEspressoIdlingResource().isIdleNow()) {
+                        EspressoIdlingResource.decrement();
+                    }
+
+                }, SERVICE_LATENCY_IN_MILIS
+
+        );
+
+        return results;
     }
 }

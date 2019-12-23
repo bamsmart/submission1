@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider;
 import learning.shinescdev.jetpack.data.source.MovieRepository;
 import learning.shinescdev.jetpack.data.source.TVRepository;
 import learning.shinescdev.jetpack.di.Injection;
-import learning.shinescdev.jetpack.ui.detail.DetailMovieViewModel;
+import learning.shinescdev.jetpack.ui.movie.detail.DetailMovieViewModel;
 import learning.shinescdev.jetpack.ui.movie.MovieViewModel;
 
 public class ViewModelMovieFactory extends ViewModelProvider.NewInstanceFactory {

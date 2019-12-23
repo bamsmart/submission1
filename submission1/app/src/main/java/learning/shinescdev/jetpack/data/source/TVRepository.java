@@ -77,7 +77,88 @@ public class TVRepository implements TVDataSource {
     }
 
     @Override
-    public LiveData<Resource<List<TVEntity>>> getTVShowById(int id) {
-        return null;
+    public LiveData<Resource<List<TVEntity>>> getTVShowById(int tvShowId) {
+        return new NetworkBoundResource<List<TVEntity>, List<TVResponse>>(appExecutors){
+
+            @Override
+            protected LiveData<List<TVEntity>> loadFromDB() {
+                return localRepository.getTVShowById(tvShowId);
+            }
+
+            @Override
+            protected Boolean shouldFetch(List<TVEntity> data) {
+                return (data == null || data.size() == 0);
+            }
+
+            @Override
+            protected LiveData<APIResponse<List<TVResponse>>> createCall() {
+                return remoteRepository.getTVShowById(tvShowId);
+            }
+
+            @Override
+            protected void saveCallResult(List<TVResponse> data) {
+
+                List<TVEntity> entities = new ArrayList<>();
+
+                for (TVResponse response : data) {
+
+                    entities.add(new TVEntity(
+                            response.getId(),
+                            response.getTitle(),
+                            response.getDate(),
+                            response.getOverview(),
+                            response.getImage(),
+                            response.getRating(),
+                            response.getVote(),
+                            response.getRevenue(),
+                            response.getFavorite()));
+                }
+
+                localRepository.insertTVShow(entities);
+            }
+        }.asLiveData();
+    }
+
+    @Override
+    public LiveData<Resource<List<TVEntity>>> getTVShowRecomm(int tvShowId) {
+        return new NetworkBoundResource<List<TVEntity>, List<TVResponse>>(appExecutors){
+
+            @Override
+            protected LiveData<List<TVEntity>> loadFromDB() {
+                return localRepository.getTVShowRecomm(tvShowId);
+            }
+
+            @Override
+            protected Boolean shouldFetch(List<TVEntity> data) {
+                return (data == null || data.size() == 0);
+            }
+
+            @Override
+            protected LiveData<APIResponse<List<TVResponse>>> createCall() {
+                return remoteRepository.getTVShowRecomm(tvShowId);
+            }
+
+            @Override
+            protected void saveCallResult(List<TVResponse> data) {
+
+                List<TVEntity> entities = new ArrayList<>();
+
+                for (TVResponse response : data) {
+
+                    entities.add(new TVEntity(
+                            response.getId(),
+                            response.getTitle(),
+                            response.getDate(),
+                            response.getOverview(),
+                            response.getImage(),
+                            response.getRating(),
+                            response.getVote(),
+                            response.getRevenue(),
+                            response.getFavorite()));
+                }
+
+                localRepository.insertTVShow(entities);
+            }
+        }.asLiveData();
     }
 }

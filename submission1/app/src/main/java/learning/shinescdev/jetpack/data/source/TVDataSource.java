@@ -11,5 +11,7 @@ import learning.shinescdev.jetpack.vo.Resource;
 public interface TVDataSource{
     LiveData<Resource<List<TVEntity>>> getAllTVShow();
 
-    LiveData<Resource<List<TVEntity>>> getTVShowById(int id);
+    LiveData<Resource<List<TVEntity>>> getTVShowById(int tvShowId);
+
+    LiveData<Resource<List<TVEntity>>> getTVShowRecomm(int tvShowId);
 }

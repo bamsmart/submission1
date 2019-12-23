@@ -34,6 +34,10 @@ public class LocalRepository {
         return mMovieDao.getMovies();
     }
 
+    public LiveData<List<MovieEntity>> getMovieRecomm(int movieId){
+        return mMovieDao.getMovieRecomm(movieId);
+    }
+
     public LiveData<List<MovieEntity>> getMovieById(int id){
         return mMovieDao.getMovieById(id);
     }
@@ -60,6 +64,13 @@ public class LocalRepository {
 
     public void insertTVShow(List<TVEntity> tv){
         mTVDao.insertTV(tv);
+    }
+
+    public LiveData<List<TVEntity>> getTVShowRecomm(int tvShowId){
+        return mTVDao.getTVShowRecomm(tvShowId);
+    }
+    public LiveData<List<TVEntity>> getTVShowById(int tvShowId){
+        return mTVDao.getTVShowById(tvShowId);
     }
 
 

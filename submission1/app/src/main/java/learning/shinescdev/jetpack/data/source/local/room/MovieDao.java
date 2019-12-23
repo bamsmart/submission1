@@ -25,6 +25,9 @@ public interface MovieDao {
     @Query("SELECT * FROM movie WHERE id = :movieId")
     LiveData<List<MovieEntity>> getMovieById(int movieId);
 
+    @Query("SELECT * FROM movie WHERE id != :movieId")
+    LiveData<List<MovieEntity>> getMovieRecomm(int movieId);
+
     @Query("SELECT * FROM movie where favorite = 1")
     DataSource.Factory<Integer,MovieEntity> getFavoriteMovies();
 

@@ -9,12 +9,12 @@
     <fragment
         android:id="@+id/navigation_movie"
         android:name="learning.shinescdev.jetpack.ui.movie.MovieFragment"
-        android:label="@string/title_home"
+        android:label="@string/title_movie"
         tools:layout="@layout/fragment_movie" />
 
     <fragment
         android:id="@+id/navigation_tv"
         android:name="learning.shinescdev.jetpack.ui.tv.TVFragment"
-        android:label="@string/title_dashboard"
+        android:label="@string/title_tv_show"
         tools:layout="@layout/fragment_tv" />
 </navigation>

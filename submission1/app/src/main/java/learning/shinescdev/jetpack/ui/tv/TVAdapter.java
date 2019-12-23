@@ -18,7 +18,8 @@ import java.util.List;
 
 import learning.shinescdev.jetpack.R;
 import learning.shinescdev.jetpack.data.source.local.entity.TVEntity;
-import learning.shinescdev.jetpack.ui.detail.DetailMovieActivity;
+import learning.shinescdev.jetpack.ui.movie.detail.DetailMovieActivity;
+import learning.shinescdev.jetpack.ui.tv.detail.DetailTVActivity;
 import learning.shinescdev.jetpack.utils.GlideApp;
 import learning.shinescdev.jetpack.utils.GlobVar;
 
@@ -56,8 +57,8 @@ public class TVAdapter extends RecyclerView.Adapter<TVAdapter.MovieViewHolder> {
         holder.txtVotes.setText(String.valueOf(getLisTVShow().get(idx).getVote()));
 
         holder.itemView.setOnClickListener(v -> {
-            Intent intent = new Intent(activity, DetailMovieActivity.class);
-            intent.putExtra(DetailMovieActivity.EXTRA_MOVIE_ID, getLisTVShow().get(idx).getId());
+            Intent intent = new Intent(activity, DetailTVActivity.class);
+            intent.putExtra(DetailTVActivity.EXTRA_TV_ID, getLisTVShow().get(idx).getId());
 
             activity.startActivity(intent);
         });

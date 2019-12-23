@@ -1,4 +1,4 @@
-package learning.shinescdev.jetpack.ui.detail;
+package learning.shinescdev.jetpack.ui.movie.detail;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -24,6 +24,10 @@ public class DetailMovieViewModel extends ViewModel {
 
     public LiveData<Resource<List<MovieEntity>>> movie = Transformations.switchMap(movieId,
             data -> movieRepository.getMovieById(id));
+
+    public LiveData<Resource<List<MovieEntity>>> getMovieRecomm = Transformations.switchMap(movieId,
+            data -> movieRepository.getMovieRecomm(id)
+    );
 
     void setMovieId (int id){
         this.id = id;
